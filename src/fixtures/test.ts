@@ -20,17 +20,8 @@ type PageObjectFixtures = {
 };
 
 type AuthFixtures = {
-  /** Compte utilisé par `authenticatedPage`. Se surcharge avec `test.use({ account }).` */
   account: Account;
-  /**
-   * Page déjà authentifiée, sans repasser par le formulaire de connexion.
-   * L'application stocke sa session dans le localStorage (`auth-storage`) ;
-   * on l'y dépose avant le premier chargement de script, ce qui est fidèle
-   * à l'état réel que produirait une connexion UI, en beaucoup plus rapide
-   * et sans dépendre du délai du compte `tortue_du_web`. La connexion via
-   * l'UI elle-même reste testée explicitement (cas 1, cas 2, investigation
-   * du compte lent) avec la fixture `page` + `loginPage`.
-   */
+
   authenticatedPage: Page;
 };
 

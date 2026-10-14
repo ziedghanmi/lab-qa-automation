@@ -16,9 +16,7 @@ export class LoginPage {
   }
 
   async goto(): Promise<void> {
-    // Chemin relatif (sans "/" en tête) : avec baseURL = ".../Lab.qa/", un
-    // chemin commençant par "/" remplacerait tout le path et pointerait vers
-    // la racine du domaine (404 GitHub Pages) au lieu de "/Lab.qa/#/login".
+  
     await this.page.goto('./#/login');
   }
 

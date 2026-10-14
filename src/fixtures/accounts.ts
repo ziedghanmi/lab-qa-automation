@@ -3,9 +3,8 @@ import { config } from '../config';
 export interface Account {
   username: string;
   password: string;
-  /** Rôle renvoyé par l'application après connexion (localStorage `auth-storage`). */
+ 
   expectedRole: string;
-  /** Description telle qu'annoncée sur la page d'accueil de Lab.qa. */
   description: string;
 }
 
@@ -36,11 +35,7 @@ export const accounts = {
   },
 } as const satisfies Record<string, Account>;
 
-/**
- * Comptes qui aboutissent à une connexion réussie — utilisés pour rejouer
- * le scénario de connexion/déconnexion (cas 1) sur plusieurs jeux de données
- * sans dupliquer le test (cas 6), y compris le compte lent (cas 5).
- */
+
 export const validAccounts: Account[] = [
   accounts.jeanDupont,
   accounts.clientChaos,

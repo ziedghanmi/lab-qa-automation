@@ -29,7 +29,7 @@ test.describe('Authentification', () => {
   }
 
   // Cas 2 : le compte verrouillé doit échouer avec un message explicite,
-  // sans jamais établir de session.
+
   test('connexion refusée pour un compte verrouillé (compte_banni)', async ({
     page,
     loginPage,
